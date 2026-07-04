@@ -39,6 +39,16 @@ export default function Sidebar({ onOpenProfile }) {
           <BookOpen size={20} />
           <span>Fichas PDF</span>
         </NavLink>
+        
+        {/* Mobile-only profile button */}
+        <div 
+          className="sidebar-link mobile-profile-btn" 
+          onClick={onOpenProfile}
+          style={{ cursor: 'pointer' }}
+        >
+          <img src={profile?.avatar_url || 'https://www.chacomer.com.py/media/wysiwyg/comagro/ISOLOGO_COMAGRO_COLOR.png'} alt="Perfil" style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }} />
+          <span>Perfil</span>
+        </div>
       </nav>
       
       <div className="sidebar-footer">

@@ -35,9 +35,9 @@ export default function Productos() {
       <header className="glass-panel" style={{ position: 'sticky', top: 0, zIndex: 100, borderRadius: 0, borderTop: 0, borderLeft: 0, borderRight: 0 }}>
         <div className="container flex-between" style={{ height: '70px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            {/* Logo removed as requested */}
+            <img src="https://www.chacomer.com.py/media/wysiwyg/comagro/ISOLOGO_COMAGRO_COLOR.png" alt="Comagro" className="mobile-logo-only" style={{ height: '32px' }} />
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flex: 1, maxWidth: '500px', margin: '0 24px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flex: 1, maxWidth: '500px', margin: '0 8px' }}>
             <div style={{ position: 'relative', width: '100%' }}>
               <Search size={18} color="var(--text-tertiary)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
               <input 

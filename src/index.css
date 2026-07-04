@@ -154,7 +154,15 @@ button.primary:hover {
 
 .main-content {
   flex: 1;
-  padding-bottom: 80px; /* Space for mobile nav */
+  padding-bottom: 90px; /* Space for mobile nav */
+}
+
+.mobile-profile-btn {
+  display: none;
+}
+
+.mobile-logo-only {
+  display: none;
 }
 
 /* Product Cards */
@@ -384,59 +392,63 @@ button.primary:hover {
   }
   
   .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: auto;
+    height: 65px;
     flex-direction: row;
     align-items: center;
+    background-color: var(--sidebar-bg);
     border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
   }
   
   .sidebar-header {
-    border-bottom: none;
-    border-right: 1px solid var(--border-color);
-  }
-  
-  .sidebar-title {
     display: none;
   }
   
   .sidebar-nav {
+    flex: 1;
     flex-direction: row;
-    padding: 0 16px;
+    padding: 0;
     align-items: center;
-    overflow-x: auto;
+    justify-content: space-around;
+    overflow-x: visible;
   }
   
   .sidebar-link {
-    padding: 12px;
+    flex-direction: column;
+    padding: 8px 2px;
+    gap: 4px;
+    justify-content: center;
+    border-radius: 0;
+    flex: 1;
   }
   
   .sidebar-link span {
-    display: none;
+    display: block !important;
+    font-size: 9px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
   }
   
   .sidebar-footer {
-    padding: 0 16px;
-    border-top: none;
-    border-left: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar-user {
     display: none;
   }
-  
-  .sidebar-logout {
-    padding: 10px;
-    border: none;
+
+  .mobile-profile-btn {
+    display: flex !important;
   }
-  
-  .sidebar-logout span {
-    display: none;
+
+  .mobile-logo-only {
+    display: block !important;
   }
-}
 
 /* ==========================================================================
    CHAT IA
