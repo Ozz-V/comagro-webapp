@@ -36,7 +36,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Scrollbar minimalista */
@@ -148,7 +148,7 @@ button.primary:hover {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
 }
 
@@ -250,7 +250,7 @@ button.primary:hover {
    ========================================================================== */
 .layout-container {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
   background-color: var(--bg-primary);
@@ -458,7 +458,7 @@ button.primary:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 100vh;
+  max-height: 100dvh;
   background-color: var(--bg-primary);
 }
 
@@ -702,7 +702,7 @@ button.primary:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-height: 100vh;
+    max-height: 100dvh;
     background-color: var(--bg-primary);
   }
   
