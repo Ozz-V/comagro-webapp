@@ -27,17 +27,18 @@ export default function ProductDetail({ producto, onClose }) {
     }}>
       <div className="glass-panel animate-fade-in" style={{
         width: '100%', maxWidth: '800px', maxHeight: '90vh',
-        overflowY: 'auto', position: 'relative', display: 'flex', flexDirection: 'column',
+        overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column',
         background: '#FFFFFF'
       }}>
         <button onClick={onClose} style={{
           position: 'absolute', top: '16px', right: '16px',
-          background: 'var(--bg-tertiary)', border: 'none', borderRadius: '50%', padding: '8px'
+          background: 'var(--bg-tertiary)', border: 'none', borderRadius: '50%', padding: '8px',
+          zIndex: 10, cursor: 'pointer'
         }}>
           <X size={20} />
         </button>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', padding: '32px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', padding: '32px', overflowY: 'auto', maxHeight: '90vh' }}>
           <div style={{ flex: '1 1 300px', background: '#FFF', borderRadius: 'var(--radius-md)', padding: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src={producto.imagen || logoUrl} alt={producto.modelo} style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'contain' }} />
           </div>
