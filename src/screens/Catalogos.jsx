@@ -61,8 +61,8 @@ export default function Catalogos() {
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: '24px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+            gap: '16px',
             width: '100%'
           }}>
             {catalogos.map(cat => (
@@ -74,19 +74,19 @@ export default function Catalogos() {
                 className="product-card animate-fade-in"
                 style={{ 
                   textDecoration: 'none', display: 'flex', flexDirection: 'column', 
-                  alignItems: 'center', padding: '32px 16px', gap: '16px', textAlign: 'center'
+                  alignItems: 'center', padding: '16px 8px', gap: '12px', textAlign: 'center'
                 }}
               >
                 {cat.brand ? (
-                  <div style={{ height: '60px', display: 'flex', alignItems: 'center' }}>
+                  <div style={{ height: '40px', display: 'flex', alignItems: 'center' }}>
                     <img src={`https://www.chacomer.com.py/media/wysiwyg/comagro/brands2025/${cat.brand}.jpg`} alt={cat.brand} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
                   </div>
                 ) : (
-                  <div style={{ background: 'rgba(28,159,75,0.1)', padding: '24px', borderRadius: '50%' }}>
-                    <FileText size={48} color="var(--accent-color)" />
+                  <div style={{ background: 'rgba(28,159,75,0.1)', padding: '16px', borderRadius: '50%' }}>
+                    <FileText size={32} color="var(--accent-color)" />
                   </div>
                 )}
-                <span style={{ fontWeight: '600', color: 'var(--text-primary)', fontSize: '15px' }}>
+                <span style={{ fontWeight: '600', color: 'var(--text-primary)', fontSize: '12px' }}>
                   {cat.displayName}
                 </span>
               </a>

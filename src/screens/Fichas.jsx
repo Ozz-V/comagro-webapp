@@ -156,8 +156,8 @@ export default function Fichas() {
                   </h2>
                   <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-                    gap: '24px',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+                    gap: '16px',
                     width: '100%'
                   }}>
                     {fichasCat.map(ficha => (
@@ -167,19 +167,19 @@ export default function Fichas() {
                         className="product-card animate-fade-in"
                         style={{ 
                           cursor: 'pointer', display: 'flex', flexDirection: 'column', 
-                          alignItems: 'center', padding: '32px 16px', gap: '16px', textAlign: 'center',
+                          alignItems: 'center', padding: '16px 8px', gap: '12px', textAlign: 'center',
                           opacity: abriendo === ficha.path ? 0.5 : 1
                         }}
                       >
-                        <div style={{ background: 'rgba(59,130,246,0.1)', padding: '24px', borderRadius: '50%', position: 'relative' }}>
+                        <div style={{ background: 'rgba(59,130,246,0.1)', padding: '16px', borderRadius: '50%', position: 'relative' }}>
                           {abriendo === ficha.path ? (
-                            <Loader2 size={48} color="var(--accent-color)" className="animate-spin" />
+                            <Loader2 size={32} color="var(--accent-color)" className="animate-spin" />
                           ) : (
-                            <BookOpen size={48} color="var(--accent-color)" />
+                            <BookOpen size={32} color="var(--accent-color)" />
                           )}
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <span style={{ fontWeight: '600', color: 'var(--text-primary)', fontSize: '15px' }}>
+                          <span style={{ fontWeight: '600', color: 'var(--text-primary)', fontSize: '12px' }}>
                             {ficha.displayName}
                           </span>
                         </div>
