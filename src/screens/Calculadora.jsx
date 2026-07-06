@@ -200,9 +200,10 @@ export default function Calculadora() {
                       onClick={() => setPumpWizard({ type: tipo })}
                       style={{ 
                         padding: '8px 16px', borderRadius: '20px', textTransform: 'capitalize',
-                        background: pumpWizard.type === tipo ? 'var(--accent-color)' : 'var(--bg-tertiary)',
+                        background: pumpWizard.type === tipo ? 'var(--accent-color)' : '#f1f5f9',
                         color: pumpWizard.type === tipo ? 'var(--bg-primary)' : 'var(--text-primary)',
-                        border: 'none', cursor: 'pointer', transition: 'all 0.2s'
+                        border: pumpWizard.type === tipo ? '1px solid var(--accent-color)' : '1px solid var(--border-color)',
+                        cursor: 'pointer', transition: 'all 0.2s', fontWeight: '500'
                       }}
                     >
                       {tipo}
@@ -216,14 +217,14 @@ export default function Calculadora() {
               <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-secondary)' }}>
                 Potencia Requerida ({calcMode === 'gen' ? 'KVA' : 'HP'})
               </label>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <input 
                   type="number" 
                   value={calcInput}
                   onChange={(e) => setCalcInput(e.target.value)}
                   placeholder="Ej: 5.5"
                   style={{
-                    flex: 1, padding: '12px 16px', borderRadius: '8px',
+                    flex: '1 1 150px', padding: '12px 16px', borderRadius: '8px',
                     border: '1px solid var(--border-color)', background: 'var(--bg-primary)',
                     color: 'var(--text-primary)', fontSize: '1rem', outline: 'none'
                   }}
@@ -231,7 +232,7 @@ export default function Calculadora() {
                 <button 
                   onClick={handleCalculate}
                   style={{
-                    padding: '0 24px', borderRadius: '8px', background: 'var(--accent-color)',
+                    flex: '1 1 auto', padding: '12px 24px', borderRadius: '8px', background: 'var(--accent-color)',
                     color: 'var(--bg-primary)', border: 'none', fontWeight: '600', cursor: 'pointer'
                   }}
                 >
