@@ -449,6 +449,10 @@ button.primary:hover {
   .mobile-logo-only {
     display: block !important;
   }
+  
+  .layout-content {
+    padding-bottom: 65px;
+  }
 }
 
 /* ==========================================================================

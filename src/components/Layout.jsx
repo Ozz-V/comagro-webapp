@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout-container">
       <Sidebar onOpenProfile={() => setShowProfileModal(true)} />
-      <main className="layout-content" style={{ flex: 1, overflowY: 'auto', width: '100%', height: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <main className="layout-content" style={{ flex: 1, overflowY: 'auto', width: '100%', display: 'flex', flexDirection: 'column' }}>
         {children}
       </main>
       
